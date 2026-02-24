@@ -6,6 +6,6 @@ read "username"
 echo "your username is $username"
 
 echo "enter your password" ::
-read "password"
+read -s "password"
 
 echo "your password is $password"
