@@ -1,3 +1,3 @@
 #!/bin/bash
 
-echo "erripukaa"
+echo "mahendra singh dhoni"
