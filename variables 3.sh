@@ -9,4 +9,4 @@ echo "sum is $TOTAL_SUM"
 
 fruits=("apple" "banana" "guava")
 
-echo "fruits are ${fruits[@]}"
+echo "fruits are ${fruits[1]}"
