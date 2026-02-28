@@ -1,14 +1,14 @@
-#1/bin/bash
+#!/bin/bash
 
 userid=$(id -u)
 
-if [ userid -ne 0 ] then
+if [ $userid -ne 0 ]; then
    echo "please run with root user"
    exit 1
 fi 
 
 validate(){
-    if [ $1 -ne 0 ] then
+    if [ $1 -ne 0 ]; then
     echo "$2 failure"
     exit 1
 
@@ -18,8 +18,8 @@ validate(){
 } 
 
 dnf install Nginx -y
-validate $1 "installing Nginx"
+validate $? "installing Nginx"
 
 dnf install Mysql -y
-validate $1 "installing Mysql"
+validate $? "installing Mysql"
 
