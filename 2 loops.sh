@@ -23,11 +23,11 @@ for package in $@
  do
  dnf installed $packages &>> $log_file
  if [$? -ne 0];then
- echo "already installed man"
+ echo "not installed man"
  dnf install $package -y &>> $log_file
  validate $? "$package installation"
  else
  echo "skipping"
  fi
- 
+
 done 
