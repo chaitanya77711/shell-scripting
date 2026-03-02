@@ -21,9 +21,9 @@ validate(){
 
 for package in $@
  do
- dnf installed $packages &>> $log_file
+ dnf list installed $package &>> $log_file
  if [$? -ne 0];then
- echo "not installed man"
+ echo " $package not installed man abhi shuru hua"
  dnf install $package -y &>> $log_file
  validate $? "$package installation"
  else
